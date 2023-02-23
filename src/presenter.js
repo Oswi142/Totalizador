@@ -1,9 +1,12 @@
+import calcularNeto from "./calcularNeto";
+
 const cant = document.querySelector("#cant");
+const precio = document.querySelector("#precio");
 const form = document.querySelector("#ventas-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  div.innerHTML = "<p>" + cant.value + "</p>";
+  div.innerHTML = "<p>" + calcularNeto(cant.value,precio.value ) + "</p>";
 });
